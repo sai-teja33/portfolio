@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/modern-normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/components/header.css"/>
+    <link rel="stylesheet" href="styles/components/hero.css" />
+    <link rel="stylesheet" href="styles/components/about.css"/>
+    <link rel="stylesheet" href="styles/components/featured.css">
+    <link rel="stylesheet" href="styles/components/work.css">
+    <link rel="stylesheet" href="styles/components/contact.css">
+    <link rel="stylesheet" href="styles/components/footer.css">
+    <link rel="stylesheet" href="styles/components/mobile-nav.css">
+    <link rel="stylesheet" href="styles/utils.css" />
+    
+    
+        <title>Dev server</title>
+  </head>
+  <body>
+    <header class="header container">
+      <nav>
+        <ul class="header__menu">
+          <li>
+            <a class="header__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="header__link"  href="#featured">Work</a>
+          </li>
+          <li>
+            <a class="header__link" href="#contact">Contact</a>
+          </li>
+          <li class="header__line"></li>
+          <li>
+            <button id="theme-toggle" class="header__sun">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="header__resume btn" href="#">Resume</a>
+          </li>
+        </ul>
+        <button class="header__bars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+          </svg> 
+        </button>
+      </nav>
+    </header>
+    <!--mobile navigation-->
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li>
+            <a class="mobile-nav__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#featured">Work</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#contact">Contact</a>
+          </li>
+          <li class="mobile-nav__link-line"></li>
+          <li>
+            <button id="theme-toggle" class="mobile-nav__sun">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="mobile-nav__btn btn" href="#">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+    <main>
+      <section class="hero container">
+        <img class="hero__img" src="./public/IMG20230325191926.jpg" alt="Profile picture" />
+        <h2 class="hero__subtitle">Hi , I'm Sai Teja  👋</h2>
+        <h1 class="hero__title">FRONT-END <br> WEB DEVELOPER.</h1>
+        <p class="hero__description">
+          Seeking an <strong> entry-level position </strong>to apply my foundational knowledge, problem-solving skills,
+and a strong passion for coding.
+        </p>
+        <a class="hero__btn btn" href="#">Reach out</a>
+      </section>
+      <section id="about" class="about container section">
+        <div class="about__content">
+          <h2 class="about__title">About</h2>
+          <p class="about__description">Sai Teja here, a final-year student specializing in crafting engaging <strong>front-end web experiences</strong>.</p>
+          <p class="about__description">I'm dedicated to turning web design concepts into reality with a focus on user experience.</p>
+          <p class="about__description">I brought my portfolio website into existence with the aid of an <a>instructional YouTube video</a> that I followed closely.</p>
+          <hr class="about__hr" >
+          <h3 class="about__subtitle">Technologies</h3>
+          <div class="about__ul-container">
+            <ul class="about__ul">
+              <li class="about__list">JAVA</li>
+              <li class="about__list">HTML</li>
+              <li class="about__list">DSA</li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">CSS</li>
+              <li class="about__list">JavaScipt</li>
+              <li class="about__list">SQL</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__img-wrapper">
+          <img 
+          loading="lazy"  class="about__img" src="./public/IMG_20230325_192641_1.jpg" alt="Profile picture"/>
+        </div>
+      </section>
+      <section id="featured" class="featured container section">
+        <h3 class="featured__subtitle">Featured Project</h3>
+        <div class="featured__wrapper"> 
+          <h2 class="featured__title">Slaying The Dragon</h2>
+          <a class="featured__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+          </svg>
+          </a>
+        </div>
+        <p class="featured__description">My portfolio website is a reflection of my dedication to the field of web development. Designed with a minimalist and user-friendly approach, it showcases a selection of projects I've worked on, each highlighting my skills in front-end and back-end development. As a web developer, I take pride in continuously enhancing my skills, and this website serves as a dynamic platform. </p>
+        <div class="featured__info-container">
+          <div>
+            <h3 class="featured__label">Tech Stack</h3>
+            <ul class="featured__tech-stack">
+              <li class="featured__info">JAVA</li>
+              <li class="featured__info">HTML</li>
+              <li class="featured__info">CSS</li>
+              <li class="featured__info">DSA</li>
+              <li class="featured__info">SQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="featured__label">Project type</h3>
+            <p class="featured__info">Fullstack-Jamstack</p>
+          </div>
+          <div>
+            <h3 class="featured__label">Timeline</h3>
+            <p class="featured__info">March 2023 - April 2023</p>
+          </div>
+        </div>
+      </section>
+      <section class="work container section">
+        <h2 class="work__title">Projects</h2>
+        <p class="work__description">These projects reflect my commitment to excellence in both web development and data analysis, demonstrating my adaptability and expertise across multiple domains.</p>
+        <div class="work__container">
+          <h3 class="work__project-title">Mall Customer Segmentation</h3>
+          <div class="work__img-wrapper work__image1">
+            <img 
+            loading="lazy"  src="./public/Picture1.png" alt="Mall Segmentation"/>
+          </div>
+          <div class="work__project work__content1">
+            <h3 class="work__project-subtitle">Mall Customer Segmentation</h3>
+            <p class="work__project-description1">Customer segmentation is the process of division of  customer base into several groups of individuals that  share a similarity in different ways that are relevant to  marketing such as gender, age, interests.</p>
+          <p class="work__project-description2">We will see the descriptive analysis of our data and  then implement several versions of the k-means  algorithm and the output for stakeholders is to work  towards building products and services for customers.</p>
+          </div>
+          <h3 class="work__project-title">Portfolio Website</h3>
+          <div class="work__img-wrapper work__image2">
+            <img 
+            loading="lazy"   src="./public/127.0.0.1_5500_(iPad Mini).png" alt="portfolio website"/>
+          </div>
+          <div class="work__project work__content2">
+            <h3 class="work__project-subtitle">Portfolio Website</h3>
+            <p class="work__project-description1">I'm proud to present the portfolio website I've crafted, a digital space that encapsulates my passion for web development and showcases my skills and experiences.</p>
+          <p class="work__project-description2">Integrated a dual-theme feature into my portfolio website.</p>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact container section">
+        <h2 class="contact__title">Get In Contact</h2>
+        <p class="contact__description">If you're looking for a dedicated professional to work on your project, I'm here to help. Feel free to contact me, and let's make your vision a reality.</p>
+        <a class="contact__btn btn" href="mailto:sainama003@gmail.com" target="_blank">Reach Out</a>
+      </section>
+    </main>
+    <footer class="footer container section">
+      <h3 class="footer__title">~ One Plus ~</h3>
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/sai.js"></script>
+  </body>
+</html>
